@@ -1,0 +1,58 @@
+Metadata-Version: 2.2
+Name: advcsv
+Version: 0.1.0
+Summary: Advanced CSV handling with encryption, compression, and validation.
+Home-page: https://github.com/Sumedh1599/advcsv
+Author: Sumedh Patil
+Author-email: admin@aipresso.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography
+Requires-Dist: jsonschema
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# advcsv
+
+`advcsv` provides secure and optimized CSV handling with **AES encryption, Gzip compression, schema validation, and multi-threading**.
+
+## Features
+
+- **Gzip compression for efficient storage**
+- **AES encryption for secure CSV storage**
+- **CSV schema validation**
+- **Multi-threaded CSV compression**
+- **Automatic key generation**
+
+## Installation
+
+```bash
+pip install advcsv
+
+USAGE:
+from advcsv import advcsv
+
+data = [["Alice", "admin"], ["Bob", "user"]]
+headers = ["name", "role"]
+key = advcsv.generate_key()
+
+compressed = advcsv.compress_csv(data, headers)
+decompressed = advcsv.decompress_csv(compressed)
+
+encrypted = advcsv.encrypt_csv(data, headers, key)
+decrypted = advcsv.decrypt_csv(encrypted, key)
+
+schema = {"type": "array", "items": {"type": "object", "properties": {"name": {"type": "string"}, "role": {"type": "string"}}}}
+is_valid = advcsv.validate_csv(data, headers, schema)
+```

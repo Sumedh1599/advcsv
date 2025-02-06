@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+advcsv.egg-info/PKG-INFO
+advcsv.egg-info/SOURCES.txt
+advcsv.egg-info/dependency_links.txt
+advcsv.egg-info/requires.txt
+advcsv.egg-info/top_level.txt
+tests/test_advcsv.py
